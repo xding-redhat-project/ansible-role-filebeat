@@ -1,7 +1,7 @@
 filebeat:
   # List of prospectors to fetch data.
   prospectors:
-    {{ filebeat_prospectors | to_json }}
+{{ filebeat_prospectors | to_nice_yaml(indent=2) | indent( width=2, indentfirst=True) }}
 
 # Configure what outputs to use when sending the data collected by the beat.
 # Multiple outputs may be used.
