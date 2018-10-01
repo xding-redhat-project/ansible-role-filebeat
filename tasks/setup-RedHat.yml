@@ -3,6 +3,7 @@
   rpm_key:
     key: https://packages.elastic.co/GPG-KEY-elasticsearch
     state: present
+    validate_certs: no
 
 - name: Add Filebeat repository.
   template:
